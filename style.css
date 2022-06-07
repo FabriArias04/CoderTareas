@@ -11,13 +11,18 @@
     color: white;
     text-align: center;
     font-size: 40px;
+    animation-name: texto;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
 }
 .nav {
     grid-area: nav;
-    border: 1px solid black;
     display: flex;
     flex-direction: column;
     padding: 20px;
+    animation-name: subir2;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
 }
 .a--nav {
     text-decoration: none;
@@ -30,6 +35,7 @@
 .section {
     grid-area: section;
     padding: 10px 40px;
+    border: 1px solid black;
 }
 .h2 {
     padding: 20px;
@@ -37,10 +43,12 @@
 }
 .aside {
     grid-area: aside;
-    border: 1px solid black;
     display: flex;
     flex-direction: column;
     padding: 10px;
+    animation-name: subir2;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
 }
 .aside div {
  padding: 10px;
@@ -143,11 +151,12 @@
 }
 .nav--noticias {
     grid-area: nav_n;
-    border: 1px solid black;
     display: flex;
     flex-direction: column;
     padding: 20px;
-    
+    animation-name: subir2;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
 }
 .a--noticias a {
     text-decoration: none;
@@ -182,8 +191,11 @@
 }
 .h1--noticias {
     color: white;
-    text-align: center;
     font-size: 40px;
+    animation-name: texto;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    text-align: center;
 }
 .h2--noticias {
     text-align: center;
@@ -198,6 +210,9 @@
     display: flex;
     flex-flow: column wrap;
     justify-items: center;
+    animation-name: subir;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
 }
 .noticias--div {
     border: 1px solid black;
@@ -205,6 +220,9 @@
     text-align: center;
     padding: 10px;
     margin: 10px 50px;
+    animation-name: achicar;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
 }
 .noticias--div:hover {
     background-color: rgb(82, 23, 23);
@@ -212,6 +230,10 @@
     color: white;
     cursor: pointer;
     user-select: none;
+    animation-name: agrandar;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    padding: 20px;
 }
 @media (min-width: 481px) and (max-width: 719px) {
     .article--flex__n {
@@ -247,5 +269,35 @@
     }
     .article--flex__n {
         font-size: 10px;
+    }
+}
+@keyframes texto {
+    from {
+        transform: translate(-400px, 0)
+    }
+}
+@keyframes subir {
+    from {
+        transform: translate(0, 50px);
+    }
+}
+@keyframes subir2 {
+    from {
+        transform: translate(0, 200px)
+    }
+}
+@keyframes agrandar {
+    from {
+        padding: 10px;
+    } to {
+        padding: 20px;
+    }
+}
+@keyframes achicar {
+    from {
+        padding: 20px;
+    }
+    to{ 
+        padding: 10px;
     }
 }
